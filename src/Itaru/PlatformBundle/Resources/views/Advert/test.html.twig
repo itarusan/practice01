@@ -1,0 +1,22 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Affichage de l'annonce {{ id }}</title>
+  </head>
+  <body>
+    <h1>Hello Annonce n°{{ id }} !</h1>
+    <p>Tag éventuel : {{ tag }}</p>
+    </br>
+    {% set variable_1 = {oui: 'oui', non:'non', certes:'certes'} %}
+    <p>création  variable {{variable_1.non}}</p>
+    {% set tabl = ['petit', 'papa', 'noel'] %}
+    <ul> {% for mot in tabl %}
+      {% if loop.length < 5 %}
+      <li>je suis {{ mot }}
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </body>
+</html>

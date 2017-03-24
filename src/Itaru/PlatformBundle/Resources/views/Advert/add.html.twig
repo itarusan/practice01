@@ -1,0 +1,14 @@
+{% extends "ItaruPlatformBundle::layout.html.twig" %}
+
+{% block body %} {{ parent()}} + vient de add.html
+
+  <h2>Ajouter une annonce</h2>
+
+  {{ include("ItaruPlatformBundle:Advert:form.html.twig") }}
+
+  <p>
+    Attention : cette annonce sera ajoutée directement
+    sur la page d'accueil après validation du formulaire.
+  </p>
+
+{% endblock %}

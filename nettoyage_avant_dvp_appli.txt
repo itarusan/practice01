@@ -1,0 +1,17 @@
+Un peu de nettoyage avant de développer l'application
+
+Avec tous les éléments générés par Symfony lors de la création du bundle et les nôtres, il y a un peu de redondance. Vous pouvez donc supprimer joyeusement :
+
+    Le contrôleur Controller/DefaultController.php ;
+
+    Le répertoire de vues Resources/views/Default ;
+
+    La route oc_platform_homepage dans Resources/config/routing.yml.
+
+Supprimez également tout ce qui concerne le bundle AppBundle,  un bundle de démonstration intégré dans la distribution standard de Symfony2 et dont nous ne nous servirons pas :
+
+    Le répertoire src/AppBundle  ;
+
+    La lignes 19 du fichier app/AppKernel.php, celle qui active le bundle : new AppBundle\AppBundle() ; 
+
+    Les lignes 7 à 9 du fichier app/config/routing.yml, celles qui importent le fichier de route du bundle AppBundle (app: resource: "@AppBundle/Controller/" type: annotation" ).

@@ -1,0 +1,52 @@
+#Attention : PAS de tabulations, mais des 4 espaces plutôt
+#prefix /platfrom ajouté dans le routeur principal
+
+Itaru_platform_home:
+    path:      /{page}
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:index
+        page:        1
+    requirements:
+        page: \d*
+    
+Itaru_platform_single:
+    path:      /advert/{id}
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:single
+    requirements:
+        id: \d+
+    
+Itaru_platform_add:
+    path:      /add
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:add
+        
+Itaru_platform_edit:
+    path:      /edit/{id}
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:edit
+    requirements:
+        id: \d+
+
+Itaru_platform_delete:
+    path:      /delete/{id}
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:delete
+    requirements:
+        id: \d+
+
+Itaru_platform_test:
+    path:      /test/{id}
+    defaults:
+        _controller: ItaruPlatformBundle:Advert:test
+    requirements:
+        id: \d+
+   
+#Itaru_platform_user:
+#    path:    /{year}/{slug}.{_format}
+#    defaults:
+#        _controller: ItaruPlatformBundle:Advert:user
+#        format: html #format par défaut (si format non #renseigné)
+#    requirements:       #contraintes sur les paramètres
+#        year:    \d{4}  #ex reg. de 4  chiffres
+#        format: xml|html #format autorisés

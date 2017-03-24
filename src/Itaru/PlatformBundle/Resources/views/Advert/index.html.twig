@@ -1,0 +1,24 @@
+{% extends "ItaruPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+{% block ItaruPlatform_body %}
+
+  <h2>Liste des annonces</h2>
+
+  <ul>
+    {% for advert in listAdverts %}
+      <li>
+        <a href="{{ path('Itaru_platform_single', {'id': advert.id}) }}">
+          {{ advert.title }}
+        </a>
+        par {{ advert.author }},
+      </li>
+    {% else %}
+      <li>Pas d'annonces - site en construction</li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

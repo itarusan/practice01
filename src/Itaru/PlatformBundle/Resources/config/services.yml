@@ -1,0 +1,7 @@
+services:
+    Itaru_platform.antispam:
+        class: Itaru\PlatformBundle\Antispam\ItaruAntispam
+        arguments:
+            - "@mailer"
+            - %locale%
+            - 50

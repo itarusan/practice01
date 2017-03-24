@@ -1,0 +1,3 @@
+itaru_platform:
+    resource: "@ItaruPlatformBundle/Resources/config/routing.yml"
+    prefix:   /platform
